@@ -1,7 +1,9 @@
+import { asset } from "../asset"
+
 export default function PageBanner({ eyebrow, title, text, image }) {
   return (
     <section className="page-banner">
-      <img src={image} alt="" />
+      <img src={asset(image)} alt="" />
       <div className="page-banner__shade" />
       <div className="wrap page-banner__content">
         {eyebrow ? <p className="eyebrow eyebrow--light">{eyebrow}</p> : null}

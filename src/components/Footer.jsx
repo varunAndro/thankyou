@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import { asset } from "../asset"
 import { brand, categories } from "../data/content"
 
 export default function Footer() {
@@ -6,7 +7,7 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="wrap footer-grid">
         <div className="footer-brand">
-          <img src="/logo-lockup.jpg" alt="Thankyou" />
+          <img src={asset("/logo-lockup.jpg")} alt="Thankyou" />
           <p>
             Faucets, showers, sanitaryware and kitchen fittings, gathered as one finish family for
             the bathroom and the kitchen.

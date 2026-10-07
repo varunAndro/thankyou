@@ -1,4 +1,5 @@
 import { Link, useParams } from "react-router-dom"
+import { asset } from "../asset"
 import PageBanner from "../components/PageBanner"
 import ProductCard from "../components/ProductCard"
 import { filterProducts, spaces } from "../data/content"
@@ -23,7 +24,7 @@ export default function Spaces() {
           <div className="wrap space-split">
             {spaces.map((item) => (
               <Link key={item.slug} to={`/spaces/${item.slug}`} className="space-panel">
-                <img src={item.image} alt="" />
+                <img src={asset(item.image)} alt="" />
                 <span className="space-panel__shade" />
                 <span className="space-panel__copy">
                   <em>Explore</em>

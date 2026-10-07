@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom"
+import { asset } from "../asset"
 
 export default function CategoryCard({ category, index }) {
   const number = String(index + 1).padStart(2, "0")
 
   return (
     <Link to={`/products?category=${category.slug}`} className="category-card">
-      <img src={category.image} alt="" />
+      <img src={asset(category.image)} alt="" />
       <span className="category-card__shade" />
       <span className="category-card__copy">
         <em>{number}</em>

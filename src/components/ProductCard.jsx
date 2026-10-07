@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import { asset } from "../asset"
 import { finishColor, formatPrice, getCategory } from "../data/content"
 
 export default function ProductCard({ product }) {
@@ -8,7 +9,7 @@ export default function ProductCard({ product }) {
     <article className="product-card">
       <Link to={`/products/${product.slug}`} className="product-card__link">
         <div className="product-card__media">
-          <img src={product.image} alt="" />
+          <img src={asset(product.image)} alt="" />
           <span className="product-card__finish">{product.finish}</span>
         </div>
         <div className="product-card__body">

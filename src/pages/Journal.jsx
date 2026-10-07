@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import { asset } from "../asset"
 import PageBanner from "../components/PageBanner"
 import { articles } from "../data/content"
 
@@ -15,7 +16,7 @@ export default function Journal() {
         <div className="wrap journal-list">
           {articles.map((article) => (
             <Link key={article.slug} to={`/journal/${article.slug}`} className="journal-card journal-card--wide">
-              <img src={article.image} alt="" />
+              <img src={asset(article.image)} alt="" />
               <div>
                 <time dateTime={article.date}>{article.date}</time>
                 <h2>{article.title}</h2>

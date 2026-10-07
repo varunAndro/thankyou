@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import { asset } from "../asset"
 import PageBanner from "../components/PageBanner"
 import { principles } from "../data/content"
 
@@ -14,7 +15,7 @@ export default function About() {
 
       <section className="section">
         <div className="wrap about-grid">
-          <img className="about-logo" src="/logo.jpg" alt="Thankyou mark and wordmark" />
+          <img className="about-logo" src={asset("/logo.jpg")} alt="Thankyou mark and wordmark" />
           <div className="prose">
             <p className="eyebrow">The name</p>
             <h2>A small word for a large amount of care.</h2>
@@ -64,7 +65,7 @@ export default function About() {
               Write to the studio
             </Link>
           </div>
-          <img src="/images/marble.jpg" alt="A white basin and wall-mounted mixer beside a freestanding bath" />
+          <img src={asset("/images/marble.jpg")} alt="A white basin and wall-mounted mixer beside a freestanding bath" />
         </div>
       </section>
     </>

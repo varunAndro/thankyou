@@ -1,4 +1,5 @@
 import { Link, useParams } from "react-router-dom"
+import { asset } from "../asset"
 import { articles, getArticle } from "../data/content"
 import NotFound from "./NotFound"
 
@@ -20,7 +21,7 @@ export default function Article() {
         </p>
         <p className="eyebrow">{article.date}</p>
         <h1>{article.title}</h1>
-        <img src={article.image} alt="" />
+        <img src={asset(article.image)} alt="" />
         <div className="prose">
           {article.body.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>

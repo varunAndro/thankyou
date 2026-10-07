@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react"
 import { Link, NavLink, useLocation } from "react-router-dom"
+import { asset } from "../asset"
 import { brand, categories, spaces } from "../data/content"
 import Button from "./Button"
 
@@ -65,7 +66,7 @@ export default function Header() {
 
       <div className="wrap header-bar">
         <Link to="/" className="brand" aria-label="Thankyou home">
-          <img src="/logo-lockup.jpg" alt="Thankyou" />
+          <img src={asset("/logo-lockup.jpg")} alt="Thankyou" />
         </Link>
 
         <button

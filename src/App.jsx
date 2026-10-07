@@ -10,9 +10,11 @@ import ProductDetail from "./pages/ProductDetail"
 import Products from "./pages/Products"
 import Spaces from "./pages/Spaces"
 
+const basename = import.meta.env.BASE_URL.replace(/\/$/, "")
+
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />

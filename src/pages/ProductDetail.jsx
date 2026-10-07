@@ -1,4 +1,5 @@
 import { Link, useParams } from "react-router-dom"
+import { asset } from "../asset"
 import EnquiryForm from "../components/EnquiryForm"
 import ProductCard from "../components/ProductCard"
 import { finishColor, formatPrice, getCategory, getProduct, products } from "../data/content"
@@ -28,7 +29,7 @@ export default function ProductDetail() {
 
         <div className="detail-grid">
           <div className="detail-media">
-            <img src={product.image} alt="" />
+            <img src={asset(product.image)} alt="" />
           </div>
           <div className="detail-copy">
             <p className="eyebrow">{category?.name}</p>

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import { asset } from "../asset"
 import Button from "../components/Button"
 import CategoryCard from "../components/CategoryCard"
 import ProductCard from "../components/ProductCard"
@@ -25,13 +26,13 @@ export default function Home() {
       <section className="hero">
         <div className="hero__media">
           <img
-            src="/images/b1.jpg"
+            src={asset("/images/b1.jpg")}
             alt="A dark stone bathroom with a freestanding bath, rain shower and twin basins"
           />
           <div className="hero__shade" />
         </div>
         <div className="wrap hero__content">
-          <img className="hero__mark" src="/logo-mark.jpg" alt="" />
+          <img className="hero__mark" src={asset("/logo-mark.jpg")} alt="" />
           <p className="eyebrow eyebrow--light">Bathware</p>
           <h1>Everyday rituals, finished with care.</h1>
           <p className="hero__lead">
@@ -51,7 +52,7 @@ export default function Home() {
 
       <section className="section intro">
         <div className="wrap intro__grid">
-          <img src="/logo-lockup.jpg" alt="Thankyou logo" />
+          <img src={asset("/logo-lockup.jpg")} alt="Thankyou logo" />
           <div>
             <SectionHeading
               eyebrow="The house"
@@ -104,7 +105,7 @@ export default function Home() {
         <div className="wrap space-split">
           {spaces.map((space) => (
             <Link key={space.slug} to={`/spaces/${space.slug}`} className="space-panel">
-              <img src={space.image} alt="" />
+              <img src={asset(space.image)} alt="" />
               <span className="space-panel__shade" />
               <span className="space-panel__copy">
                 <em>Explore by space</em>
@@ -168,7 +169,7 @@ export default function Home() {
           <div className="journal-grid">
             {articles.map((article) => (
               <Link key={article.slug} to={`/journal/${article.slug}`} className="journal-card">
-                <img src={article.image} alt="" />
+                <img src={asset(article.image)} alt="" />
                 <div>
                   <time dateTime={article.date}>{article.date}</time>
                   <h3>{article.title}</h3>
